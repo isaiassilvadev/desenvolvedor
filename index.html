@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isaias Silva | Desenvolvedor Web</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre Mim</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Dê o Próximo Passo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio">
+      <img src="imagens/isaias-silva.jpg" alt="Foto de Isaias Silva" class="foto-perfil">
+      <h1 class="titulo-principal">Isaias Silva | Desenvolvedor Frontend</h1>
+      <p class="txt-destaque">Criando soluções web com foco em semântica, acessibilidade e resultados reais.</p>
+    </section>
+
+    <section id="sobre">
+      <h2 class="subtitulo-secao">Sobre Mim</h2>
+      <p class="txt-descricao">
+        Desenvolvedor em constante evolução, focado em construir a base sólida da web.
+        Acredito que a tecnologia deve ser poderosa por dentro e simples por fora.
+      </p>
+
+      <article class="especialidades">
+        <div class="card-especialidade">
+          <i class='bx bx-layout'></i>
+          <h3>Landing Pages</h3>
+          <p>Páginas focadas em conversão com design moderno e responsivo.</p>
+        </div>
+
+        <div class="card-especialidade">
+          <i class='bx bx-devices'></i>
+          <h3>Sites Institucionais</h3>
+          <p>Sua marca no mundo digital com performance e elegância.</p>
+        </div>
+
+        <div class="card-especialidade">
+          <i class='bx bx-edit'></i>
+          <h3>Formulários</h3>
+          <p>Sistemas de captura de dados validados e seguros para seu negócio.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="projetos">
+      <h2 class="subtitulo-secao">Projetos em destaque</h2>
+
+      <article class="card-projeto">
+        <h3 class="titulo-projeto">Mel Serra Dourada (Landing Page)</h3>
+        <a href="paginas/pag1.html" class="link-img-projeto">
+          <img src="imagens/pag-mel.png" alt="Landing Page Mel Serra Dourada" class="img-projeto">
+        </a>
+        <p class="txt-projeto">Esta é uma vitrine online de alta conversão, desenhada para destacar a qualidade de
+          produtos artesanais e transmitir total confiança ao consumidor final através de um design acolhedor e
+          profissional. Tecnicamente, a página foi construída com HTML5 Semântico e CSS3, utilizando técnicas de design
+          responsivo e Mobile-First para garantir que o site carregue rapidamente e mantenha a beleza em qualquer
+          tamanho de tela. O objetivo central foi transformar o negócio local em uma marca digital forte, facilitando a
+          conexão direta entre o produtor e o cliente interessado.</p>
+      </article>
+
+      <article class="card-projeto">
+        <h3 class="titulo-projeto">Portal de Acesso Seguro</h3>
+        <a href="paginas/pag2.html" class="link-img-projeto">
+          <img src="imagens/pag-logindef.png" alt="Tela de Login e Autenticação" class="img-projeto">
+        </a>
+        <p class="txt-projeto">Este projeto foca na experiência de entrada do usuário, funcionando como uma porta de
+          segurança amigável que orienta o preenchimento correto de dados através de alertas inteligentes. A interface
+          utiliza CSS3 avançado para efeitos visuais de foco e JavaScript para validar formulários em tempo real,
+          evitando erros comuns de digitação antes mesmo do envio dos dados. O objetivo foi criar um componente de
+          segurança robusto e elegante, priorizando a usabilidade e garantindo que a primeira interação do usuário com
+          um sistema seja fluida e livre de frustrações.</p>
+      </article>
+
+      <article class="card-projeto">
+        <h3 class="titulo-projeto">Lista de Tarefas Inteligente</h3>
+        <a href="paginas/pag3.html" class="link-img-projeto">
+          <img src="imagens/pag-tarefas.png" alt="Clique para ver a Lista de Tarefas" class="img-projeto">
+        </a>
+        <p class="txt-projeto">Este projeto é um organizador digital intuitivo criado para que qualquer pessoa consiga
+          gerenciar suas atividades diárias sem o risco de esquecer compromissos importantes. Desenvolvido com
+          JavaScript Vanilla, ele utiliza manipulação avançada de DOM e lógica de arrays para garantir que a interface
+          responda instantaneamente aos comandos do usuário. O objetivo principal foi criar uma ferramenta leve e
+          funcional, focada em produtividade, que demonstra como a lógica de programação pode simplificar tarefas do
+          cotidiano de forma ágil e eficiente.</p>
+      </article>
+
+      <article class="card-projeto">
+        <h3 class="titulo-projeto">Galeria de Exposição Digital</h3>
+        <a href="paginas/pag4.html" class="link-img-projeto">
+          <img src="imagens/pag-gsleria.png" alt="Galeria de Projetos Responsiva" class="img-projeto">
+        </a>
+        <p class="txt-projeto">Este é um álbum digital inteligente que organiza imagens de forma dinâmica, adaptando
+          automaticamente o layout para que a visualização seja perfeita tanto em computadores quanto em celulares. O
+          projeto utiliza o poder do CSS Grid Layout para criar uma estrutura de grade profissional, permitindo que os
+          elementos se realoquem com fluidez sem perder a harmonia visual. O objetivo foi demonstrar domínio técnico em
+          layouts modernos, oferecendo uma solução de exposição de conteúdo que valoriza cada imagem e proporciona uma
+          navegação agradável para o visitante.</p>
+      </article>
+    </section>
+
+    <section id="contato">
+      <h2 class="subtitulo-secao">Entre em Contato</h2>
+      <p class="txt-descricao">Gostou do meu trabalho? Vamos conversar sobre como posso ajudar no seu próximo projeto!
+      </p>
+
+      <form action="#" id="meuFormulario" method="POST" class="form-contato" onsubmit="enviarWhats(event)">
+        <div class="campo-form">
+          <label for="nome">Seu Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="mensagem">Como posso ajudar?</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva brevemente o seu projeto ou ideia"
+            required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Solicitar Orçamento Grátis</button>
+      </form>
+    </section>
+  </main>
+  <a href="https://wa.me/5511978029168" class="btn-whatsapp-flutuante" target="_blank">
+    <i class='bx bxl-whatsapp'></i>
+  </a>
+  <script>
+    function enviarWhats(event) {
+     // ESSENCIAL: Impede o navegador de tentar dar "refresh" na página ao clicar no botão
+      event.preventDefault(); 
+
+      var nome = document.getElementById('nome').value
+      var mensagem = document.getElementById('mensagem').value
+      var tel = '5511978029168'
+
+      var texto = `Olá! Me chamo ${nome}, ${mensagem}`
+      var msgformatada = encodeURIComponent(texto)
+
+      var url = `https://wa.me/${tel}?text=${msgformatada}`
+
+      window.open(url, '_blank')
+    }
+  </script>
+</body>
+
+</html>

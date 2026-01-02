@@ -1,0 +1,393 @@
+* {}
+/* 1. VARIÁVEIS DE AMBIENTE */
+:root {
+    /* Base Midnight Ruby (225, 29, 72) */
+    --cor-fundo: #0F0F0F;
+    
+    /* RGBA Quase preto com toque rubi para Form, Header e Cards */
+    --cor-vidro-escuro: rgba(15, 10, 11, 0.95); 
+    --cor-rubi-transparente: rgba(225, 29, 72, 0.1);
+    
+    /* Destaques */
+    --cor-principal: #E11D48;
+    --cor-principal-hover: #FB7185;
+    
+    --cor-texto: #F8FAFC;
+    --borda-suave: rgba(225, 29, 72, 0.2);
+    --transicao: 0.3s ease;
+    --cor-whatsapp: #25D366;
+}
+
+/* 2. RESET E FONTES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    /* Priorizando Segoe UI e Verdana conforme solicitado */
+    font-family: "Segoe UI", Verdana, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* 3. HEADER COM TRANSPARÊNCIA RUBI/PRETA */
+header {
+    background: rgba(15, 10, 11, 0.5);
+    border-bottom: 1px solid var(--borda-suave);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 1000;
+    padding: 2em 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+header nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transicao) 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-principal);
+}
+
+header nav ul li:last-child a {
+    background: var(--cor-principal);
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: var(--transicao);
+}
+
+header nav ul li:last-child a:hover {
+    background: var(--cor-principal-hover);
+    box-shadow: 0 0 10px var(--cor-principal);
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+.subtitulo-secao {
+  margin-bottom: 2em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+  display: block; /* Garante que ocupe a linha toda para centralizar */
+}
+
+.subtitulo-secao::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--cor-principal);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--cor-principal); /* Brilho neon rubi */
+}
+
+/* 4. SEÇÃO PRINCIPAL (Sempre em Coluna) */
+#inicio {
+    padding-top: 80px; /* Compensa o header */
+    min-height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center;
+    gap: 20px;
+
+}
+
+.foto-perfil {
+    width: 120px; /* Tamanho menor solicitado */
+    height: 120px;
+    border-radius: 50%; /* Redonda */
+    border: 3px solid var(--cor-principal);
+    object-fit: cover;
+}
+
+.foto-perfil {
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(225, 29, 72, 0.4); /* Brilho rubi ao redor da sua foto */
+}
+
+#sobre {
+    padding: 60px 20px; /* 60px em cima/baixo e 20px nas laterais */
+    max-width: 800px;   /* Limita a largura para o texto ficar fácil de ler */
+    margin: 0 auto;    /* Centraliza a seção inteira na tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    text-align: center;  /* Centraliza o texto */
+}
+
+.txt-descricao {
+    padding: 0 15px;    /* Espaçamento extra interno para as laterais */
+    margin-top: 20px;   /* Afasta o texto do título H2 */
+    font-size: 1.1rem;  /* Aumenta um pouco a fonte para facilitar a leitura */
+    color: var(--cor-texto-apoio); /* Usa aquela cor de suporte que definimos */
+}
+
+.subtitulo-secao {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    display: block; /* Garante que ocupe a linha toda para centralizar */
+}
+
+/* 5. PROJETOS (Grid Mobile First) */
+#projetos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-projeto {
+     background: var(--cor-vidro-escuro);
+    border: 1px solid var(--borda-suave);
+    border-radius: 15px;
+    padding: 30px; /* Aumentado de 20px para 30px para dar respiro */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre H3, Imagem e Parágrafo */
+}
+
+.txt-projeto {
+    padding: 0 10px; /* Espaço extra nas laterais do texto */
+    text-align: justify; /* Opcional: deixa o bloco de texto mais elegante */
+}
+
+#projetos .subtitulo-secao {
+    text-align: center;
+    margin: 80px auto 50px; /* 80px de espaço acima e 50px antes dos cards */
+    font-size: 2.2em;      /* Um pouco maior para dar hierarquia */
+    letter-spacing: 2px;    /* Ar mais tech/moderno */
+    color: var(--cor-principal);
+    position: relative;
+     grid-column: 1 / -1; /* Faz o H2 ocupar todas as colunas disponíveis */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Link na imagem com Cursor Pointer */
+.link-img-projeto {
+    display: block;
+    width: 100%;
+    height: 250px; /* Altura fixa para o desktop ter harmonia */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 15px 0;
+    cursor: pointer; /* Cursor pointer na imagem */
+}
+
+.img-projeto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover para não distorcer */
+    transition: var(--transicao);
+}
+
+.img-projeto:hover {
+    transform: scale(1.05);
+}
+
+/* 6. FORMULÁRIO (Quase preto / Rubi Opacidade) */
+#contato {
+    max-width: 600px;
+    margin: 80px auto 30px auto;
+    padding: 60 20px;
+}
+
+#contato .subtitulo-secao {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#contato::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cor-principal), transparent);
+    margin: 0 auto 80px; /* Centraliza e afasta do conteúdo anterior */
+}
+
+.form-contato {
+    background: var(--cor-vidro-escuro);
+    border: 1px solid var(--borda-suave);
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo-form input, 
+.campo-form textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--borda-suave);
+    border-radius: 8px;
+    color: white;
+}
+
+/* Botão cobrindo largura inteira */
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-principal);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer; /* Cursor pointer no botão */
+    transition: var(--transicao);
+}
+
+.btn-enviar:hover {
+    background-color: var(--cor-principal-hover);
+    box-shadow: 0 0 15px var(--cor-principal);
+}
+
+.campo-form input:focus, 
+.campo-form textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+    background: rgba(225, 29, 72, 0.05); /* Leve brilho rubi no fundo ao clicar */
+    box-shadow: 0 0 10px rgba(225, 29, 72, 0.2);
+}
+
+/* Estilização do Botão Flutuante */
+.btn-whatsapp-flutuante {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--cor-whatsapp);
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transicao) 0.3s ease;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-whatsapp-flutuante:hover {
+    transform: scale(1.1);
+    background-color: #128C7E; /* Verde um pouco mais escuro no hover */
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+    border: 2px solid #FFF;
+}
+
+/* Container das Especialidades */
+.especialidades {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.card-especialidade {
+    background: var(--cor-vidro-escuro);
+    border: 1px solid var(--borda-suave);
+    padding: 25px;
+    border-radius: 12px;
+    transition: var(--transicao);
+    text-align: center;
+}
+
+.card-especialidade:hover {
+    border-color: var(--cor-principal);
+    transform: translateY(-5px);
+}
+
+.card-especialidade i {
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.card-especialidade h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: var(--cor-texto);
+}
+
+/* 7. DESKTOP (Grid 2 Colunas) */
+@media (min-width: 768px) {
+
+    header {
+      padding: 50px 6px;
+    }
+
+   #projetos {
+        /* Cria duas colunas iguais no desktop */
+        grid-template-columns: repeat(2, 1fr); 
+        align-items: start; /* Alinha os cards pelo topo caso tenham textos de tamanhos diferentes */
+    }
+
+/* 4. O Card (Reforçando o seu pedido de padding e overflow) */
+    .card-projeto {
+      background: var(--cor-vidro-escuro);
+      border: 1px solid var(--borda-suave);
+      border-radius: 15px;
+      padding: 30px; /* Espaçamento interno generoso */
+      overflow: hidden; /* Garante que nada saia do card */
+      display: flex;
+      flex-direction: column;
+  }
+
+    #projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .titulo-principal {
+        font-size: 3rem;
+    }
+
+    .btn-whatsapp-flutuante {
+      font-size: 35px;
+    }
+
+    .especialidades {
+        flex-direction: row; /* Coloca as 3 especialidades lado a lado */
+        justify-content: center;
+    }
+
+    .card-especialidade {
+        flex: 1; /* Faz todas as divs terem o mesmo tamanho */
+        max-width: 300px;
+    }
+}
