@@ -151,6 +151,60 @@ section {
     margin-bottom: 30px;
     display: block; /* Garante que ocupe a linha toda para centralizar */
 }
+.tec {
+    display: flex;
+    padding: 20px 4;
+    margin-top: 2em;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tec h3 {
+    margin-bottom: 1.5em;
+}
+
+.card-tec {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height:100%;
+    padding:12px 6px
+}
+
+.card-tec img {
+    align-self: center;
+    justify-self: center;
+    width: 100px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    outline: 1px solid var(--cor-principal);
+    border-color: 1px solid var(--cor-vidro-escuro);
+}
+
+.card-tec p {
+    padding: 0 8px;
+}
+
+.card-tec .ling {
+    border-radius: 50%;
+    outline: 1px solid var(--cor-principal);
+    border-color: 1px solid var(--cor-vidro-escuro);
+}
+
+.card-tec img:hover {
+    transform: scale(1.05);
+}
+
+ .card-tec::after {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 3px;
+        background-color: var(--cor-principal);
+        margin: 10px auto 0;
+        border-radius: 2px;
+        box-shadow: 0 0 10px var(--cor-principal);
+}
 
 /* 5. PROJETOS (Grid Mobile First) */
 #projetos {
@@ -163,7 +217,7 @@ section {
 }
 
 .card-projeto {
-     background: var(--cor-vidro-escuro);
+    background: var(--cor-vidro-escuro);
     border: 1px solid var(--borda-suave);
     border-radius: 15px;
     padding: 30px; /* Aumentado de 20px para 30px para dar respiro */
@@ -176,6 +230,25 @@ section {
 .txt-projeto {
     padding: 0 10px; /* Espaço extra nas laterais do texto */
     text-align: justify; /* Opcional: deixa o bloco de texto mais elegante */
+}
+
+.ver {
+    background: var(--cor-principal);
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+    transition: var(--transicao);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    width: 60%;
+    justify-self: center;
+    align-self: center;
+}
+
+.ver:hover {
+    background: var(--cor-principal-hover);
+    box-shadow: 0 0 10px var(--cor-principal);
 }
 
 #projetos .subtitulo-secao {
@@ -350,6 +423,20 @@ section {
 
     header {
       padding: 50px 6px;
+    }
+
+    .card-tec {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-tec img { 
+        margin-bottom: 0px;
+    }
+
+    .card-tec::after {
+        content: '';
+        display: none;
     }
 
    #projetos {
