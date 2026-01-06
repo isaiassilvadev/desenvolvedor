@@ -246,10 +246,7 @@ section {
     align-self: center;
 }
 
-.ver:hover {
-    background: var(--cor-principal-hover);
-    box-shadow: 0 0 10px var(--cor-principal);
-}
+
 
 #projetos .subtitulo-secao {
     text-align: center;
@@ -263,26 +260,49 @@ section {
     margin-bottom: 20px;
 }
 
-/* Link na imagem com Cursor Pointer */
-.link-img-projeto {
-    display: block;
-    width: 100%;
-    height: 250px; /* Altura fixa para o desktop ter harmonia */
-    overflow: hidden;
-    border-radius: 10px;
-    margin: 15px 0;
-    cursor: pointer; /* Cursor pointer na imagem */
-}
-
 .img-projeto {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Cover para não distorcer */
-    transition: var(--transicao);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.img-projeto:hover {
-    transform: scale(1.05);
+.card-projeto {
+  position: relative;
+}
+
+.card-projeto p {
+    margin-bottom: 1.2em;
+}
+
+.img-projeto {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.circulos {
+    display: flex;
+    gap: 35px;
+}
+
+.circuloH {
+    background-color: #e34f26;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.circuloC {
+    background-color: #1572b6;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.circuloJ {
+    background-color: #f7df1e;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }
 
 /* 6. FORMULÁRIO (Quase preto / Rubi Opacidade) */
@@ -418,6 +438,18 @@ section {
     color: var(--cor-texto);
 }
 
+@media (hover:none) and (max-width: 767px) {
+  .ver {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .ver:active {
+    transform: scale(0.96);
+    background: var(--cor-principal-hover);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
 /* 7. DESKTOP (Grid 2 Colunas) */
 @media (min-width: 768px) {
 
@@ -459,6 +491,11 @@ section {
     #projetos {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .card-projeto:hover .img-projeto {
+    transform: scale(1.18) translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+   }
     
     .titulo-principal {
         font-size: 3rem;
@@ -477,4 +514,9 @@ section {
         flex: 1; /* Faz todas as divs terem o mesmo tamanho */
         max-width: 300px;
     }
+
+    .ver:hover {
+    background: var(--cor-principal-hover);
+    box-shadow: 0 0 10px var(--cor-principal);
+}
 }

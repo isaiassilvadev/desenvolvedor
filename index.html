@@ -82,57 +82,69 @@
 
       <article class="card-projeto">
         <h3 class="titulo-projeto">Mel Serra Dourada (Landing Page)</h3>
-        <a href="#" class="link-img-projeto">
           <img src="imagens/pag-mel.png" alt="Landing Page Mel Serra Dourada" class="img-projeto">
-        </a>
+
         <div class="ferramentas">
-          <p><strong>HTML | CSS</strong></p>
+           <div class="txt-ferramnetas"><p><strong>HTML | CSS</strong></p></div>
+           <div class="circulos">
+                <div class="circuloH"></div>
+                <div class="circuloC"></div>
+           </div>
         </div>
-        <p class="txt-projeto">Esta é uma vitrine online de alta conversão, desenhada para destacar a qualidade do
-          produto e transmitir total confiança ao consumidor final através de um design acolhedor e
-          profissional. A página foi construída utilizando técnicas de design
-          responsivo e Mobile-First para garantir que o site carregue rapidamente e mantenha a beleza em qualquer
-          tamanho de tela.</p>
-          <a href="https://isaiassilvadev.github.io/melserradourada/#" class="ver">Visitar Projeto</a>
+        <p class="txt-projeto">  Landing page focada em conversão, com design responsivo e abordagem Mobile-First para garantir desempenho e
+        consistência visual em qualquer tela.</p>
+          <a href="https://isaiassilvadev.github.io/melserradourada/#" class="ver" target="_blank" data-delay>Visitar Projeto</a>
       </article>
 
       <article class="card-projeto">
         <h3 class="titulo-projeto">Portal de Acesso Seguro</h3>
-        <a href="#" class="link-img-projeto">
           <img src="imagens/pag-logindef.png" alt="Tela de Login e Autenticação" class="img-projeto">
-        </a>
-        <p class="txt-projeto">Este projeto foca na experiência de entrada do usuário, funcionando como uma porta de entrada atrante e moderna. A interfaceutiliza CSS3 avançado para efeitos visuais de foco e JavaScript para a validação formulários em tempo real,
-          evitando erros comuns de digitação antes mesmo do envio dos dados. Garantindo a usabilidade e que a primeira interação do usuário com
-          um sistema seja fluida e livre de frustrações.</p>
-          <a href="https://isaiassilvadev.github.io/fazerlogin" class="ver">Visitar Projeto</a>
+          <div class="ferramentas">
+           <div class="txt-ferramnetas"><p><strong>HTML | CSS | JavaScript</strong></p></div>
+           <div class="circulos">
+                <div class="circuloH"></div>
+                <div class="circuloC"></div>
+                <div class="circuloJ"></div>
+           </div>
+        </div>
+
+        <p class="txt-projeto"> Tela de login moderna focada na experiência do usuário, com validação em tempo real para reduzir erros
+        e garantir uma primeira interação fluida e intuitiva com o sistema.</p>
+          <a href="https://isaiassilvadev.github.io/fazerlogin" class="ver" target="_blank" data-delay>Visitar Projeto</a>
       </article>
 
       <article class="card-projeto">
         <h3 class="titulo-projeto">Lista de Tarefas Inteligente</h3>
-        <a href="#" class="link-img-projeto">
           <img src="imagens/pag-tarefas.png" alt="Clique para ver a Lista de Tarefas" class="img-projeto">
-        </a>
-        <p class="txt-projeto">Este projeto é um organizador digital intuitivo criado para que qualquer pessoa consiga
-          gerenciar. Desenvolvido com HTML5, CSS3 e
-          JavaScript, ele utiliza manipulação avançada de DOM e lógica de arrays para garantir que a interface
-          responda instantaneamente aos comandos do usuário. O objetivo principal foi criar uma ferramenta leve e
-          funcional, que demonstra como a lógica de programação pode simplificar tarefas do
-          cotidiano de forma eficiente.</p>
-          <a href="isaiassilvadev.github.io/Listadetarefas" class="ver">Visitar Projeto</a>
+          <div class="ferramentas">
+           <div class="txt-ferramnetas"><p><strong>HTML | CSS | JavaScript</strong></p></div>
+           <div class="circulos">
+                <div class="circuloH"></div>
+                <div class="circuloC"></div>
+                <div class="circuloJ"></div>
+           </div>
+        </div>
+        
+        <p class="txt-projeto">Organizador de tarefas intuitivo, com interface responsiva e resposta imediata às ações do usuário,
+        focado em simplicidade, leveza e eficiência no gerenciamento do dia a dia.</p>
+          <a href="isaiassilvadev.github.io/Listadetarefas" class="ver" target="_blank" data-delay>Visitar Projeto</a>
       </article>
 
       <article class="card-projeto">
         <h3 class="titulo-projeto">Galeria de Exposição Digital</h3>
-        <a href="#" class="link-img-projeto">
           <img src="imagens/pag-gsleria.png" alt="Galeria de Projetos Responsiva" class="img-projeto">
-        </a>
-        <p class="txt-projeto">Este é um álbum digital inteligente que organiza imagens de forma dinâmica, adaptando
-          automaticamente o layout para que a visualização seja perfeita tanto em computadores quanto em celulares. O
-          projeto utiliza HTML, JavaScript e o poder do CSS Grid Layout para criar uma estrutura de grade profissional, permitindo que os
-          elementos se realoquem com fluidez sem perder a harmonia visual. O objetivo foi demonstrar domínio técnico em
-          layouts modernos, oferecendo uma solução de exposição de conteúdo que valoriza cada imagem e proporciona uma
-          navegação agradável para o visitante.</p>
-          <a href="https://isaiassilvadev.github.io/galeria" class="ver">Visitar Projeto</a>
+          <div class="ferramentas">
+           <div class="txt-ferramnetas"><p><strong>HTML | CSS | JavaScript</strong></p></div>
+           <div class="circulos">
+                <div class="circuloH"></div>
+                <div class="circuloC"></div>
+                <div class="circuloJ"></div>
+           </div>
+        </div>
+
+        <p class="txt-projeto"> Galeria digital responsiva que organiza imagens de forma dinâmica, adaptando o layout para diferentes
+        tamanhos de tela e proporcionando uma navegação fluida e agradável.</p>
+          <a href="https://isaiassilvadev.github.io/galeria" class="ver" target="_blank" data-delay>Visitar Projeto</a>
       </article>
     </section>
 
@@ -176,6 +188,24 @@
 
       window.open(url, '_blank')
     }
+
+    const isTouchDevice =
+  window.matchMedia('(hover: none)').matches &&
+  window.matchMedia('(pointer: coarse)').matches;
+
+   if (isTouchDevice) {
+  document.querySelectorAll('a[data-delay]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const url = this.href;
+
+      setTimeout(() => {
+        window.open(url, '_blank', 'noopener');
+      }, 500);
+    });
+  });
+}
   </script>
 </body>
 
